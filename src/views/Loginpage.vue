@@ -29,7 +29,7 @@ export default {
   methods: {
     async login() {
       try {
-        const response = await axios.post('http://localhost:3333/user/login', {
+        const response = await axios.post('https://backend-lala.vercel.app/login', {
           username: this.username,
           password: this.password
         });

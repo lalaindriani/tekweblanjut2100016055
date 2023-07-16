@@ -28,7 +28,7 @@ export default {
   methods: {
     async register() {
       try {
-        const response = await axios.post('http://localhost:3333/user/register', {
+        const response = await axios.post('https://backend-lala.vercel.app/register', {
           username: this.username,
           password: this.password
         });

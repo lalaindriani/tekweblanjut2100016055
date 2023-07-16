@@ -71,7 +71,7 @@ export default {
     },
     async createRencana() {
       try {
-        const response = await axios.post('http://localhost:3333/data/rencana', this.rencanaData, {
+        const response = await axios.post('https://backend-lala.vercel.app/rencana', this.rencanaData, {
           headers: { Authorization: `Bearer ${this.getToken()}` },
         });
         this.rencanas.push(response.data);
@@ -84,7 +84,7 @@ export default {
     },
     async getAllRencana() {
       try {
-        const response = await axios.get('http://localhost:3333/data/rencana', {
+        const response = await axios.get('https://backend-lala.vercel.app/rencana', {
           headers: { Authorization: `Bearer ${this.getToken()}` },
         });
         this.rencanas = response.data;
@@ -99,7 +99,7 @@ export default {
     async updateRencana() {
       try {
         const response = await axios.put(
-          `http://localhost:3333/data/rencana/${this.selectedRencana._id}`,
+          `https://backend-lala.vercel.app/rencana/${this.selectedRencana._id}`,
           this.selectedRencana,
           {
             headers: { Authorization: `Bearer ${this.getToken()}` },
@@ -117,7 +117,7 @@ export default {
     },
     async deleteRencana(id) {
       try {
-        await axios.delete(`http://localhost:3333/data/rencana/${id}`, {
+        await axios.delete(`https://backend-lala.vercel.app/rencana/${id}`, {
           headers: { Authorization: `Bearer ${this.getToken()}` },
         });
         this.rencanas = this.rencanas.filter((rencana) => rencana._id !== id);
