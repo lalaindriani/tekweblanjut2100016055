@@ -38,7 +38,7 @@ export default {
           // Display a success message to the user
 
           // Redirect the user to the login page
-          this.$router.push('/login');
+          this.$router.push('/');
         } else {
           console.error(response.data.error);
           // Display an error message to the user
